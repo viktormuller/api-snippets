@@ -7,8 +7,8 @@ public class Example {
   public static final String ACCOUNT_SID = "ACCOUNT_SID";
   public static final String AUTH_TOKEN = "AUTH_TOKEN";
   public static final String SERVICE_SID = "SERVICE_SID";
-  public static final String CHANNEL_SID = "CHANNEL_ID";
-  public static final String MEMBER_SID = "MEMBER_ID";
+  public static final String CHANNEL_SID = "CHANNEL_SID";
+  public static final String MEMBER_SID = "MEMBER_SID";
 
   public static void main(String[] args) {
     // Initialize the client

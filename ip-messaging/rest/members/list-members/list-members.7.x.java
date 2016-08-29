@@ -8,14 +8,14 @@ public class Example {
   public static final String ACCOUNT_SID = "ACCOUNT_SID";
   public static final String AUTH_TOKEN = "AUTH_TOKEN";
   public static final String SERVICE_SID = "SERVICE_SID";
-  public static final String CHANNEL_ID = "CHANNEL_ID";
+  public static final String CHANNEL_SID = "CHANNEL_SID";
 
   public static void main(String[] args) {
     // Initialize the client
     Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
     // Retrieve the list of members on that channel
-    ResourceSet<Member> members = Member.read(SERVICE_SID, CHANNEL_ID).execute();
+    ResourceSet<Member> members = Member.read(SERVICE_SID, CHANNEL_SID).execute();
 
     for (Member member : members) {
       System.out.println(member.getIdentity());

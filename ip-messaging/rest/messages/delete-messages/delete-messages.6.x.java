@@ -10,8 +10,8 @@ public class TwilioTest {
     public static final String AUTH_TOKEN = "AUTH_TOKEN";
 
     public static final String SERVICE_SID = "SERVICE_SID";
-    public static final String CHANNEL_ID = "CHANNEL_ID";
-    public static final String MESSAGE_ID = "MESSAGE_ID";
+    public static final String CHANNEL_SID = "CHANNEL_SID";
+    public static final String MESSAGE_SID = "MESSAGE_SID";
 
     public static void main(String args[]) throws TwilioRestException {
         // Initialize the client
@@ -19,8 +19,8 @@ public class TwilioTest {
 
         // Retrieve the service, channel, and message
         Service service = client.getService(SERVICE_SID);
-        Channel channel = service.getChannel(CHANNEL_ID);
-        Message message = channel.getMessage(MESSAGE_ID);
+        Channel channel = service.getChannel(CHANNEL_SID);
+        Message message = channel.getMessage(MESSAGE_SID);
 
         // Delete the message
         boolean didDelete = message.delete();

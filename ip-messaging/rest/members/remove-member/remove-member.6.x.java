@@ -10,8 +10,8 @@ public class TwilioTest {
     public static final String AUTH_TOKEN = "AUTH_TOKEN";
 
     public static final String SERVICE_SID = "SERVICE_SID";
-    public static final String CHANNEL_ID = "CHANNEL_ID";
-    public static final String MEMBER_ID = "MEMBER_ID";
+    public static final String CHANNEL_SID = "CHANNEL_SID";
+    public static final String MEMBER_SID = "MEMBER_SID";
 
     public static void main(String args[]) throws TwilioRestException {
         // Initialize the client
@@ -19,7 +19,7 @@ public class TwilioTest {
 
         // Delete a a member from the channel
         Service service = client.getService(SERVICE_SID);
-        Channel channel = service.getChannel(CHANNEL_ID);
-        channel.getMember(MEMBER_ID).delete();
+        Channel channel = service.getChannel(CHANNEL_SID);
+        channel.getMember(MEMBER_SID).delete();
     }
 }

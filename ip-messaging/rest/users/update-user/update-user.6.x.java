@@ -10,7 +10,7 @@ public class TwilioTest {
     public static final String AUTH_TOKEN = "AUTH_TOKEN";
 
     public static final String SERVICE_SID = "SERVICE_SID";
-    public static final String USER_ID = "USER_ID";
+    public static final String USER_SID = "USER_SID";
 
     public static void main(String args[]) throws TwilioRestException {
         // Initialize the client
@@ -22,7 +22,7 @@ public class TwilioTest {
         // Update the user
         final Map<String, String> userParams = new HashMap<String, String>();
         userParams.put("RoleSid", "new_role_sid");
-        User user = service.getUser(USER_ID);
+        User user = service.getUser(USER_SID);
         user.update(userParams);
         System.out.println(user);
     }

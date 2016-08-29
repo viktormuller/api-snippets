@@ -7,14 +7,14 @@ public class TwilioTest {
     public static final String ACCOUNT_SID = "ACCOUNT_SID";
     public static final String AUTH_TOKEN = "AUTH_TOKEN";
     public static final String SERVICE_SID = "SERVICE_SID";
-    public static final String CREDENTIAL_ID = "CREDENTIAL_ID";
+    public static final String CREDENTIAL_SID = "CREDENTIAL_SID";
 
     public static void main(String args[]) throws TwilioRestException {
         // Initialize the client
         TwilioIPMessagingClient client = new TwilioIPMessagingClient(ACCOUNT_SID, AUTH_TOKEN);
 
         // Update the credential
-        Credential credential = client.getCredential(CREDENTIAL_ID);
+        Credential credential = client.getCredential(CREDENTIAL_SID);
         final Map<String, String> credParams = new HashMap<String, String>();
         credParams.put("ApiKey", "NewApiKey");
         credential.update(credParams);
