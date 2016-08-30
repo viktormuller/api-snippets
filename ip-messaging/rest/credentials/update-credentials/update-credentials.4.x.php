@@ -15,6 +15,6 @@ $credential = $client->credentials->get("CREDENTIAL_SID");
 
 // Update the credential
 $response = $credential->update(
-    array("Type" => "NEW_TYPE")
+    array("FriendlyName" => "New name")
 );
 print $response;
